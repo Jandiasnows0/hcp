@@ -1,0 +1,108 @@
+@charset 'utf-8';
+header nav {
+  font-size: 10px;
+}
+header .top .you {
+  display: none;
+}
+body .cebian .zx {
+  margin-top: 100px;
+  font-size: 10px;
+}
+body .cebian .daohang {
+  width: 90%;
+  padding-left: 0px;
+}
+body .cebian .daohang button {
+  width: 30%;
+  margin-right: 2%;
+}
+body footer {
+  font-size: 12px;
+  margin-top: 15px;
+}
+body .cebian > .tc > .nr {
+  font-size: 14px;
+  padding-left: 10%;
+}
+body .cebian > .tc > .nr button {
+  font-size: 14px;
+  height: 25px;
+  width: 40%;
+}
+body .cebian > .dl > .nr {
+  font-size: 14px;
+  padding-left: 5%;
+}
+body .cebian > .dl > .nr p {
+  margin-bottom: 20px;
+}
+body .cebian > .dl > .nr button {
+  width: 40%;
+  font-size: 15px;
+  height: 25px;
+}
+body .cebian > .dl > .nr p {
+  margin-bottom: 10px;
+}
+body .cebian > .dl > .nr span {
+  font-size: 30px;
+}
+body .cebian > .zc > .nr {
+  font-size: 14px;
+  margin-left: 10%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10%;
+}
+body .cebian > .zc > .nr input {
+  margin-top: 5px;
+}
+body .cebian > .zc > .nr button {
+  font-size: 15px;
+  height: 25px;
+}
+body .cebian > .zc > .nr p {
+  margin-bottom: 10px;
+}
+body .cebian > .zc > .nr span {
+  font-size: 30px;
+}
+/*站站*/
+.center .zz_show .xx .start {
+  margin-left: 7%;
+}
+.center .zz_show input {
+  width: 25%;
+}
+.center .zz_show td {
+  font-size: 12px;
+}
+.zz_table {
+  margin-bottom: -3px;
+}
+.center .yp_show .xx .start {
+  margin-left: 7%;
+}
+.center .yp_show input {
+  width: 25%;
+}
+.center .yp_show td {
+  font-size: 12px;
+}
+.yp_table {
+  margin-bottom: -3px;
+}
+/*车次*/
+.center .cc_show .xx .checi {
+  margin-left: 20%;
+}
+.center .cc_show input {
+  width: 25%;
+}
+.center .cc_show td {
+  font-size: 12px;
+}
+.center .cc_show .result table:first-child {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>火车查票购票系统</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<script type="text/javascript" src="plug/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/hcp.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/hcp.css">
+</head>
+<body>
+	<div id="container">
+<!-- 头部 -->
+		<header>
+			<div class="top">
+			    <span class="sy">首页</span>
+			    <span class="you">
+			        <span class="zx huanye">个人中心</span>|
+			        <span class="dl huanye">登录</span>|
+			        <span class="zc huanye">注册</span>|
+			        <span class="tc huanye">退出</span>
+			    </span>
+			 <div class="cb">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="main">
+			    <li class="huanye0">个人中心</li>
+				<ul>
+					<li class="huanye0">登录</li>
+					<li class="huanye0">注册</li>
+					<li class="huanye0">退出</li>
+				</ul>
+			</div>
+			</div>
+			<nav class="clear">
+				<ul>
+					<li class="zz">站站查询</li>
+					<li class="cc">车次查询</li>
+					<li class="yp">余票查询</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- 11 -->
+	<!-- 	<div class="" style="position: relative;top: 100px;z-index: 20">
+			<input value="烟台">
+			<input value="济南">
+			<input>
+			<input>
+			<button id="cx">查询</button>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				var a=$('input[value="烟台"]').val();
+				var b=$('input[value="济南"]').val()
+				$('#cx').click(function(){
+					$.ajax({
+                      url:'http://apis.baidu.com/qunar/qunar_train_service/suggestsearch',
+                      type:'GET',
+			headers:{'apikey':'2dff9384f9db2e2a5ae19341a4416e36'},
+		    data:{keyword:'北京'},
+			dataType:'json',
+			success:function(data){
+				alert(data)
+			}
+					})
+				})
+			})
+		</script> -->
+<!-- 中部 -->
+		<div class="center clear">
+			<ul>
+<!-- 站站 -->
+			     <li class="zz_show">
+			         <div class="xx clear">
+			         	<input class="start fd" type="text" placeholder="出发站">
+			         	<input class="end fd" type="text" placeholder="目的站">
+			         	<input class="sj fd" type="text" placeholder="出发日期(2016-05-01)">
+			         	<button class="cx fd">查询</button> 
+			         </div>
+			         <div class="result">
+			         	<table class="zz_table first">
+			     	 		<tr>
+			     	 			<td>车次</td>
+			     	 			<td>出发时间</td>
+			     	 			<td>出发站</td>
+			     	 			<td>最低票价</td>
+			     	 		</tr>
+			     	 		<tr>
+			     	 			<td>时长</td>
+			     	 			<td>到达时间</td>
+			     	 			<td>目的站</td>
+			     	 			<td>余票</td>
+			     	 		</tr>
+
+			     	 	</table>
+			         </div>
+			         <div class="result_yp">
+			              <button>返回</button>
+			         </div>
+			     </li>
+<!-- 车次 -->
+			     <li class="cc_show">
+			     	 <div class="xx clear">
+			     	 	<input class="checi fd" type="text" placeholder="车次">
+			     	 	<input class="time fd" type="text" placeholder="出发日期(2016-05-01)">
+			     	 	<button class="cx fd">查询</button>
+			     	 </div>
+			     	 <div class="result">
+			     	 	<table class="base_table">
+			     	 		<tr>
+			     	 			<td>总路程</td>
+			     	 			<td>历时</td>
+			     	 		</tr>
+			     	 	</table>
+			     	 </div>
+			     </li>
+<!-- 余票 -->
+			     <li class="yp_show">
+			     	<div class="xx clear">
+			     		<input class="start fd" type="text" placeholder="出发站">
+			         	<input class="end fd" type="text" placeholder="目的站">
+			         	<input class="sj fd" type="text" placeholder="出发日期(2016-05-01)">
+			     		<button class="cx fd">查询</button>
+			     	</div>
+			     	<div class="result"></div>
+			     </li>
+			</ul>
+		</div>
+
+			         	
+
+
+	</div>
+
+
+	<!-- 侧边 -->
+  <div class="cebian">
+  <!-- 个人中心 -->
+       <div class="zx huanyeh" style="display: none;">
+         <div class="nr">
+       	  <span class="x">X</span>
+       	  <div class="daohang">
+       	  <button>个人信息</button>
+       	  <button>订单查询</button>
+       	  <button>购票历史</button></div>
+       	  <table>
+       	  	<tr>
+       	  		<td>账号：</td>
+       	  		<td></td>
+       	  		<td><button>修改</button></td>
+       	  	</tr>
+       	  	<tr>
+       	  		<td>密码：</td>
+       	  		<td></td>
+       	  		<td><button>修改</button></td>
+       	  	</tr>
+       	  	<tr>
+       	  		<td>姓名：</td>
+       	  		<td></td>
+       	  		<td><button>修改</button></td>
+       	  	</tr>
+       	  	<tr>
+       	  		<td>性别：</td>
+       	  		<td></td>
+       	  		<td><button>修改</button></td>
+       	  	</tr>
+       	  	<tr>
+       	  		<td>证件类型：</td>
+       	  		<td></td>
+       	  		<td><button>修改</button></td>
+       	  	</tr>
+       	  	<tr>
+       	  		<td>证件号码：</td>
+       	  		<td></td>
+       	  		<td><button>修改</button></td>
+       	  	</tr>
+       	  	<tr>
+       	  		<td>手机号码：</td>
+       	  		<td></td>
+       	  		<td><button>修改</button></td>
+       	  	</tr>
+       	  	<tr>
+       	  		<td>旅客类型：</td>
+       	  		<td></td>
+       	  		<td><button>修改</button></td>
+       	  	</tr>
+       	  </table>
+		 <p><button class="fh">返回</button></p>
+ </div>
+       </div>
+  <!-- 登录 -->
+         <div class="dl huanyeh">
+         <div class="nr">
+            <span class="x">X</span>
+        	<p>
+        		<label>账号：</label>
+        		<input type="text">
+        	</p>
+        	<p>
+        		<label type="password">密码：</label>
+        		<input type="password">
+        	</p>
+        	<p>
+        		<button>登录</button>
+        		<button class="fh">返回</button>
+        	</p></div>
+        </div>
+   <!-- 注册 -->
+        <div class="zc huanyeh" style="position: relative;top: 100px">
+		  <div class="nr">
+		    <span class="x">X</span>
+			<p>
+				<label>账号：</label><br>
+				<input type="text" placeholder="6-30位账号或字母">
+			</p>
+			<p>
+				<label>密码：</label><br>
+				<input type="password" placeholder="不少于6为数字加字母">
+			</p>
+			<p>
+				<label>姓名：</label><br>
+				<input type="text" placeholder="请填写真实姓名">
+			</p>
+			<p>
+				<label>性别：</label><br>
+				<input type="radio" name="sex" value="0" checked="">男
+				<input type="radio" name="sex" value="1">女
+			</p>
+			<p>
+				<label>证件类型：</label><br>
+                <input type="radio" name="zj" value="0" checked="">二代身份证
+                <input type="radio" name="zj" value="1">港澳通行证
+                <br>
+                <input type="radio" name="zj" value="2" class="br">台湾通行证
+                <input type="radio" name="zj" value="3">护照
+			</p>
+			<p>
+				<label>证件号码：</label><br>
+				<input type="text">
+			</p>
+			<p>
+				<label>手机号码：</label><br>
+			    <input type="text" placeholder="用于接收12306短信">
+			</p>
+			<p>
+				<label>旅客类型：</label><br>
+				<input type="radio" name="lk" value="0" checked="">成人
+				<input type="radio" name="lk" value="1">儿童
+				<br>
+				<input type="radio" name="lk" value="2" class="br">学生
+				<input type="radio" name="lk" value="3">伤残军人
+			</p>
+			<p>
+				<button>注册</button>
+				<button class="fh">返回</button>
+			</p>
+			</div>
+		</div>
+     <!-- 退出    -->
+     <div class="tc huanyeh">
+       <div class="nr">
+     	<span class="x">X</span>
+     	<button>确定退出</button>
+     	<button class="fh">返回</button>
+        
+       </div>
+     </div>
+
+
+
+</div>
+
+<!-- 尾部 -->
+		<footer>
+				<div class="weibu">
+				<div class="left">相关新闻</div>
+				<div class="right">交流留言</div>
+				</div>
+	   </footer>
+
+</body>
+</html>
